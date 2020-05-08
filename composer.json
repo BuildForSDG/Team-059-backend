@@ -1,14 +1,17 @@
 {
-    "name": "Edu Conect",
-    "type": "project",
-    "description": "This is the solution to Build For SDG goal 4, problem statement 1",
+    "$schema": "http://json-schema.org/draft/2019-09/schema#",
+    "name": "BuildForSDG/Edu_Conect",
+    "type": "object",
+    "description": "This is the solution to Build For SDG goal 4, problem statement 1: Increasing the number of Qualified teachers.",
     "keywords": [
         "teachers",
         "qualified",
         "trained",
         "not trained",
         "school",
-        "student teacher"
+        "student teacher",
+        "registered teachers",
+        "non registered teachers"
     ],
     "license": "MIT",
     "require": {
