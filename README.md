@@ -9,11 +9,11 @@ This is a solution that will help substantially increase the supply of qualified
 
 This is a Laravel and React.Js project. The setup contains
 
-- Composer: For adding third party dependencies
+-  Composer: For adding third party dependencies
 
-- phpunit: For runnung tests
+-  phpunit: For runnung tests
 
-- php-cs-fixer: For formatting code to match php coding standard
+-  php-cs-fixer: For formatting code to match php coding standard
 
 ## Why
 
@@ -34,20 +34,20 @@ All tests should be written in the tests folder.
 
 #### Hints
 
-- Test: `./vendor/bin/phpunit`
-- Install dependencies: `composer install <dep name>`
-- Lint: `composer run php-cs-fixer`
+-  Test: `./vendor/bin/phpunit`
+-  Install dependencies: `composer install <dep name>`
+-  Lint: `composer run php-cs-fixer`
 
 ## Authors
 
--[Timothy Ododo] (https://github.com/darlingtim) `Technical Team Lead`
--[Bonvic Bundi Nyabuya] (https://github.com/b0nbon1)  `Mentor`
--[Christian Osueke] (https://github.com/osueke-christian) `Member`
--[Chukwu Peter] (https://github.com/peterchijioke) `Member`
--[Olaniyi Ojeyinka] (https://github.com/niyiojeyinka) `Member`
--[Emeri Chifum .S] (https://github.com/chifum) `Member`
--[Joseph Chinemerem Jeremiah] (https://github.com/jerry299) `Member`
--[Ibrahim] (https://github.com/ibraahyyym) `Member`
+-  [Timothy Ododo] (https://github.com/darlingtim) `Technical Team Lead`
+-  [Bonvic Bundi Nyabuya] (https://github.com/b0nbon1)  `Mentor`
+-  [Christian Osueke] (https://github.com/osueke-christian) `Member`
+-  [Chukwu Peter] (https://github.com/peterchijioke) `Member`
+-  [Olaniyi Ojeyinka] (https://github.com/niyiojeyinka) `Member`
+-  [Emeri Chifum .S] (https://github.com/chifum) `Member`
+-  [Joseph Chinemerem Jeremiah] (https://github.com/jerry299) `Member`
+-  [Ibrahim] (https://github.com/ibraahyyym) `Member`
 
 
 ## Contributing
