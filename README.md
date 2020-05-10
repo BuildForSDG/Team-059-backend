@@ -40,14 +40,14 @@ All tests should be written in the tests folder.
 
 ## Authors
 
--  [Timothy Ododo] (https://github.com/darlingtim) `Technical Team Lead`
--  [Bonvic Bundi Nyabuya] (https://github.com/b0nbon1)  `Mentor`
--  [Christian Osueke] (https://github.com/osueke-christian) `Member`
--  [Chukwu Peter] (https://github.com/peterchijioke) `Member`
--  [Olaniyi Ojeyinka] (https://github.com/niyiojeyinka) `Member`
--  [Emeri Chifum .S] (https://github.com/chifum) `Member`
--  [Joseph Chinemerem Jeremiah] (https://github.com/jerry299) `Member`
--  [Ibrahim] (https://github.com/ibraahyyym) `Member`
+-  [Timothy Ododo](https://github.com/darlingtim) `Technical Team Lead`
+-  [Bonvic Bundi Nyabuya](https://github.com/b0nbon1)  `Mentor`
+-  [Christian Osueke](https://github.com/osueke-christian) `Member`
+-  [Chukwu Peter](https://github.com/peterchijioke) `Member`
+-  [Olaniyi Ojeyinka](https://github.com/niyiojeyinka) `Member`
+-  [Emeri Chifum .S](https://github.com/chifum) `Member`
+-  [Joseph Chinemerem Jeremiah](https://github.com/jerry299) `Member`
+-  [Ibrahim](https://github.com/ibraahyyym) `Member`
 
 
 ## Contributing
