@@ -26,7 +26,7 @@ The quality and quantity of teachers determines the quality and quantity of impa
 
 ## Setup
 
-Run `composer install` , `composer dump-autoload` , create `.env` file from `.env.example` and then run `php artisan key:generate` to get started.
+Run `composer install` , `composer dump-autoload` , create `.env` file from `.env.example` , `php artisan key:generate` and `npm install` to get started.
 
 `php artisan serve` is used to start the application server.
 
@@ -34,20 +34,20 @@ All tests should be written in the tests folder.
 
 #### Hints
 
--  Test: `./vendor/bin/phpunit`
--  Install dependencies: `composer install <dep name>`
--  Lint: `composer run php-cs-fixer`
+- Test: `./vendor/bin/phpunit`
+- Install dependencies: `composer install <dep name>`
+- Lint: `composer run php-cs-fixer`
 
 ## Authors
 
--  [Timothy Ododo](https://github.com/darlingtim) `Technical Team Lead`
--  [Bonvic Bundi Nyabuya](https://github.com/b0nbon1)  `Mentor`
--  [Christian Osueke](https://github.com/osueke-christian) `Member`
--  [Chukwu Peter](https://github.com/peterchijioke) `Member`
--  [Olaniyi Ojeyinka](https://github.com/niyiojeyinka) `Member`
--  [Emeri Chifum .S](https://github.com/chifum) `Member`
--  [Joseph Chinemerem Jeremiah](https://github.com/jerry299) `Member`
--  [Ibrahim](https://github.com/ibraahyyym) `Member`
+- [Timothy Ododo](https://github.com/darlingtim) `Technical Team Lead`
+- [Bonvic Bundi Nyabuya](https://github.com/b0nbon1) `Mentor`
+- [Christian Osueke](https://github.com/osueke-christian) `Member`
+- [Chukwu Peter](https://github.com/peterchijioke) `Member`
+- [Olaniyi Ojeyinka](https://github.com/niyiojeyinka) `Member`
+- [Emeri Chifum .S](https://github.com/chifum) `Member`
+- [Joseph Chinemerem Jeremiah](https://github.com/jerry299) `Member`
+- [Ibrahim](https://github.com/ibraahyyym) `Member`
 
 
 ## Contributing
