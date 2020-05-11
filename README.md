@@ -26,7 +26,7 @@ The quality and quantity of teachers determines the quality and quantity of impa
 
 ## Setup
 
-Run `composer install` , `composer dump-autoload` , create `.env` file from `.env.example` , `php artisan key:generate` and `npm install` to get started.
+Run `composer install` , `composer dump-autoload` , `cp .env.example .env` , `php artisan key:generate` and `npm install` to get started.
 
 `php artisan serve` is used to start the application server.
 
