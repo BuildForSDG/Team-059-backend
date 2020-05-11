@@ -1,25 +1,24 @@
 A one-liner phrase describing this project or app
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/6273d5826b4d43788cb11626834bac84)](https://app.codacy.com/gh/BuildForSDG/Team-059-Product?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/Team-059-Product&utm_campaign=Badge_Grade_Dashboard)
-[![Codacy Badge](https://img.shields.io/badge/Code%20Quality-D-red)](https://img.shields.io/badge/Code%20Quality-D-red)
+
 
 ## About
 
-What is this project about. Ok to enrich here or the section above it with an image. 
+This is a solution that will help substantially increase the supply of qualified teachers in your community. Included is a plan to integrate or collaborate with international cooperations for teachers to be trained in developing countries.  
 
-Once this repo has been setup on Codacy by the TTL, replace the above badge with the actual one from the Codacy dashboard, and add the code coverage badge as well. This is mandatory
+This is a Laravel and React.Js project. The setup contains
 
-This is a simple php starter repo template for setting up your project. The setup contains
+-  Composer: For adding third party dependencies
 
-- Composer: For adding third party dependencies
+-  phpunit: For runnung tests
 
-- phpunit: For runnung tests
-
-- php-cs-fixer: For formatting code to match php coding standard
+-  php-cs-fixer: For formatting code to match php coding standard
 
 ## Why
 
-Talk about what problem this solves, what SDG(s) and SGD targets it addresses and why these are imoirtant
+The number of registered and qualified teachers globally is low and it is drastically reducing leaving us with teachers that are not qualified or under qualified in the educational system. Some qualified teachers has gone for some other profession rather than teaching. 
+The quality and quantity of teachers determines the quality and quantity of impact made on the young generation which in turn affects the development of all sectors globally.
 
 ## Usage
  How would someone use what you have built, include URLs to the deployed app, service e.t.c when you have it setup
@@ -27,21 +26,29 @@ Talk about what problem this solves, what SDG(s) and SGD targets it addresses an
 
 ## Setup
 
-Run `composer install` and `composer dump-autoload` to get started.
+Run `composer install` , `composer dump-autoload` , create `.env` file from `.env.example` , `php artisan key:generate` and `npm install` to get started.
 
-`index.php` is the entry to the project and source code should go into the `src` folder.
+`php artisan serve` is used to start the application server.
 
-All tests should be written in the test folder.
+All tests should be written in the tests folder.
 
 #### Hints
 
-- Test: `composer run test`
+- Test: `./vendor/bin/phpunit`
 - Install dependencies: `composer install <dep name>`
 - Lint: `composer run php-cs-fixer`
 
 ## Authors
 
-List the team behind this project. Their names linked to their Github, LinkedIn, or Twitter accounts should siffice. Ok to signify the role they play in the project, including the TTL and mentor
+- [Timothy Ododo](https://github.com/darlingtim) `Technical Team Lead`
+- [Bonvic Bundi Nyabuya](https://github.com/b0nbon1) `Mentor`
+- [Christian Osueke](https://github.com/osueke-christian) `Member`
+- [Chukwu Peter](https://github.com/peterchijioke) `Member`
+- [Olaniyi Ojeyinka](https://github.com/niyiojeyinka) `Member`
+- [Emeri Chifum .S](https://github.com/chifum) `Member`
+- [Joseph Chinemerem Jeremiah](https://github.com/jerry299) `Member`
+- [Ibrahim](https://github.com/ibraahyyym) `Member`
+
 
 ## Contributing
 If this project sounds interesting to you and you'd like to contribute, thank you!
@@ -52,11 +59,7 @@ First, you can send a mail to buildforsdg@andela.com to indicate your interest, 
 
 ## Acknowledgements
 
-Did you use someone else’s code?
-Do you want to thank someone explicitly?
-Did someone’s blog post spark off a wonderful idea or give you a solution to nagging problem?
 
-It's powerful to always give credit.
 
 ## LICENSE
 MIT
