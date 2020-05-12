@@ -14,6 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+ 
+//User routing group
+Route::prefix('v1/user')->middleware([/*'auth:api'*/])->group(function(){
+
+    Route::get('/',function(){
+        return response()->json(['details'=>'User endpoint']);
+    });
+
+    Route::post('/create','api\v1\UserController@register');
+    Route::post('/login','api\v1\UserController@authenticate');
+
+
+    //protect user endpoints
+     Route::middleware(['jwt.verify'])->group(
+function(){
+   
+
+
+}
+
+     );
+    
+    });
+

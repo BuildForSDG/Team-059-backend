@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\api\v1;
 
+use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
+
 
 class UserController extends Controller
 {
@@ -17,13 +19,13 @@ class UserController extends Controller
 
         try {
             if (! $token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'invalid_credentials'], 400);
+                return response()->json(["result"=>0,'error' => 'invalid_credentials'], 401);
             }
         } catch (JWTException $e) {
-            return response()->json(['error' => 'could_not_create_token'], 500);
+            return response()->json(["result"=>0,'error' => 'could_not_create_token'], 500);
         }
 
-        return response()->json(compact('token'));
+        return response()->json(["result"=>1,"token"=>$token]);
     }
 
     public function register(Request $request)
@@ -31,11 +33,11 @@ class UserController extends Controller
             $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|string|min:6',
         ]);
 
         if($validator->fails()){
-                return response()->json($validator->errors()->toJson(), 400);
+                return response()->json(["result"=>0,"error"=>$validator->errors()], 400);
         }
 
         $user = User::create([
@@ -45,8 +47,7 @@ class UserController extends Controller
         ]);
 
         $token = JWTAuth::fromUser($user);
-
-        return response()->json(compact('user','token'),201);
+        return response()->json(["result"=>1,"user"=>$user,"token"=>$token],201);
     }
 
     public function getAuthenticatedUser()
@@ -54,23 +55,23 @@ class UserController extends Controller
                 try {
 
                         if (! $user = JWTAuth::parseToken()->authenticate()) {
-                                return response()->json(['user_not_found'], 404);
+                                return response()->json(["result"=>0,"error"=>'user_not_found'], 404);
                         }
 
                 } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
 
-                        return response()->json(['token_expired'], $e->getStatusCode());
+                        return response()->json(["result"=>0,"error"=>'token_expired'], $e->getStatusCode());
 
                 } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
 
-                        return response()->json(['token_invalid'], $e->getStatusCode());
+                        return response()->json(["result"=>0,"error"=>'token_invalid'], $e->getStatusCode());
 
                 } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
 
-                        return response()->json(['token_absent'], $e->getStatusCode());
+                        return response()->json(["result"=>0,"error"=>'token_absent'], $e->getStatusCode());
 
                 }
-
-                return response()->json(compact('user'));
+                $result =1;
+                return response()->json(compact('user','result'));
         }
 }
