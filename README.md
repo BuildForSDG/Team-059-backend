@@ -1,6 +1,6 @@
 A one-liner phrase describing this project or app
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6273d5826b4d43788cb11626834bac84)](https://app.codacy.com/gh/BuildForSDG/Team-059-Product?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/Team-059-Product&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6273d5826b4d43788cb11626834bac84)](https://app.codacy.com/gh/BuildForSDG/Team-059-backend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/Team-059-Product&utm_campaign=Badge_Grade_Dashboard)
 
 
 ## About
