@@ -1,0 +1,7 @@
+    - name: Codacy Coverage Reporter
+  uses: codacy/codacy-coverage-reporter-action@0.2.0
+  with:
+    # Project token for the Codacy project you want to send coverage information
+    project-token: 1bed999d9645401fa549db80564bbf42
+    # Optional comma separated list of coverage reports to send to Codacy
+    coverage-reports: # optional, default is 
