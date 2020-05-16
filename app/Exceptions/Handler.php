@@ -5,6 +5,15 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
+use Illuminate\Http\Client\RequestException;
+use Illuminate\Http\Client\ConnectionException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Database\Eloquent\MassAssignmentException;
+use Illuminate\Database\QueryException;
+use \Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
+use \Spatie\Permission\Exceptions\UnauthorizedException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
 class Handler extends ExceptionHandler
 {
     /**
@@ -50,6 +59,35 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if ($exception instanceof ConnectionException){
+            return error($exception->getMessage(), 500);
+            
+        }
+        if ($exception instanceof RequestException){
+            return badRequest($exception->getMessage(), 400);
+        }
+        if($exception instanceof ModelNotFoundException){
+            return notFound('Requested resource was not found');
+        }
+        if($exception instanceof MassAssignmentException){
+            return unAuthorized('You are trying to fill an unfillable property. I am watching you!');
+        }
+        if($exception instanceof UnauthorizedException){
+            return unAuthorized();
+        }
+        // if($exception instanceof QueryException){
+        //     return error('A query exception occured', 500);
+        // }
+        if($exception instanceof MethodNotAllowedHttpException){
+            return error('Http method used is not valid for requested resource', 404);
+        }
+        if($exception instanceof NotFoundHttpException){
+            return error('Not found', 404);
+        }
+        if($exception instanceof \InvalidArgumentException){
+            return error($exception->getMessage(), 400);
+        }
+        
         return parent::render($request, $exception);
     }
 }
