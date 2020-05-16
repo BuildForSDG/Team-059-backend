@@ -24,6 +24,7 @@ Route::prefix('v1/user')->middleware([])->group(function(){
 
     Route::post('/create','api\v1\Users\UserController@create');
     Route::post('/login','api\v1\Users\UserController@login');
+    Route::post('/logout','api\v1\Users\UserController@logout');
 
 
     //protect user endpoints
