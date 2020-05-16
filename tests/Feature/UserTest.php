@@ -15,6 +15,7 @@ class UserTest extends TestCase
     use RefreshDatabase;
 
     
+
    public function register()
    {
        return  $this->post($this->baseURL.'create',[
@@ -24,7 +25,13 @@ class UserTest extends TestCase
     ]);
    }
 
+    /** @test @return void */
 
+    public function test_setup_is_okay()
+    {
+        $response = $this->get($this->baseURL);
+        $response->assertStatus(200);
+    }
     /** @test @return void */
     public function new_user_can_register()
     {
@@ -76,4 +83,19 @@ class UserTest extends TestCase
 
   }
 
+   /** @test @return void */
+   public function user_can_logout()
+   {
+    $this->register();
+    $response = $this->post($this->baseURL.'login',[
+        'email'=>'test@email.com',
+        'password'=>'testpassword',
+    ]);
+      
+       $logout = $this->post($this->baseURL."logout",['token'=>$response['data']['token']]);
+       
+       $logout->assertJSON(['result'=>1]);
+       $logout->assertOk();
+
+   }
 }
