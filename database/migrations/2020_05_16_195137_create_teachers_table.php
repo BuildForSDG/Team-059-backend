@@ -15,13 +15,16 @@ class CreateTeachersTable extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['student', 'certified'])
-                  ->comment('Student Teacher | Certified Teacher');
-            $table->enum('status', ['retired', 'practicing', 'amature'])
-                  ->comment('Retired | Practicing | Amature');
-            $table->boolean('employed');
-            $table->enum('employment_status', ['self-employed', 'unemployed', 'employee', 'employer']);
-            $table->boolean('love_teaching');
+            $table->boolean('student_teacher')
+                  ->comment('Are you currently running any programme that will qualify you to be a professional teacher?');
+            $table->boolean('certified_teacher')
+                  ->comment('Have you been certified as a Teacher? e.g by a teacher certification body');
+            $table->enum('teaching_status', ['currently teaching', 'retired teacher', 'ex-teacher', 'never practised'])
+                  ->comment(' Currently Teaching | Retired Teacher | Ex-Teacher | Never Practised');
+            $table->boolean('employed')->comment('Are you employed in another sector');
+            $table->enum('employment_category', ['self-employed', 'employee', 'employer'])
+                  ->comment('if you are a retired teacher, ex-teacher or have never practised and you are employed, select your employment category.');
+            $table->boolean('love_teaching')->comment('Do you love teaching?');
             $table->timestamps();
         });
     }

@@ -24,8 +24,9 @@ class CreateQualificationsTable extends Migration
             $table->string('course');
             $table->datetime('year_admitted');
             $table->datetime('year_graduated');
-            $table->string('mat_no');
-            $table->string('id_card_url');
+            $table->string('mat_no')->nullable();
+            $table->string('id_card_url')->nullable();
+            $table->string('result_url')->nullable();
             $table->timestamps();
 
             // Foreign key constraints
